@@ -1,8 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf8 -*-
-import codecs
+import sys
 import os
-
+from xml.etree import ElementTree
+from xml.etree.ElementTree import Element, SubElement
+from lxml import etree
+import codecs
 from libs.constants import DEFAULT_ENCODING
 
 TXT_EXT = '.txt'

@@ -1,0 +1,13 @@
+services:
+  labelimg:
+    image: labelimg:v1
+    volumes:
+      - /home/$USER:/home/$USER:rw
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/shadow:/etc/shadow:ro
+      - /etc/sudoers.d:/etc/sudoers.d:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=unix$DISPLAY
+    user: "1000"  # 替换为 id -u 命令的输出
